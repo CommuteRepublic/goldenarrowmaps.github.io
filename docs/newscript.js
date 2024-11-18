@@ -4,7 +4,6 @@ function filterImages() {
   const selectedRoute = document.getElementById('route-select').value.toLowerCase();
   const selectedFrom = document.getElementById('from-select').value.toLowerCase();
   const selectedTo = document.getElementById('to-select').value.toLowerCase();
-  const selectedVia = document.getElementById('via-select').value.toLowerCase();
 
   // Get all filter divs (each image container)
   const filterDivs = document.querySelectorAll('.filterdiv');
@@ -14,7 +13,6 @@ function filterImages() {
     const route = div.getAttribute('data-route').toLowerCase();
     const from = div.getAttribute('data-from').toLowerCase();
     const to = div.getAttribute('data-to').toLowerCase();
-    const via = div.getAttribute('data-via').toLowerCase();
 
     // Check if the image matches the selected filters
     let shouldDisplay = true;
@@ -27,9 +25,6 @@ function filterImages() {
       shouldDisplay = false;
     }
     if (selectedTo !== 'all' && to !== selectedTo) {
-      shouldDisplay = false;
-    }
-    if (selectedVia !== 'all' && via !== selectedVia) {
       shouldDisplay = false;
     }
 
