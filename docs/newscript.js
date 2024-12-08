@@ -18,13 +18,13 @@ function filterImages() {
     let shouldDisplay = true;
 
     // Check each filter, show the item only if it matches the selected filter
-    if (selectedRoute !== 'all' && route !== selectedRoute) {
+    if (selectedRoute !== 'default' && route !== selectedRoute) {
       shouldDisplay = false;
     }
-    if (selectedFrom !== 'all' && from !== selectedFrom) {
+    if (selectedFrom !== 'default' && from !== selectedFrom) {
       shouldDisplay = false;
     }
-    if (selectedTo !== 'all' && to !== selectedTo) {
+    if (selectedTo !== 'default' && to !== selectedTo) {
       shouldDisplay = false;
     }
 
