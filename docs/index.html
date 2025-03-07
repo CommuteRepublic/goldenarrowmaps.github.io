@@ -3918,14 +3918,24 @@ fullscreenControlOptions: {
 }
 });
 
-L.Routing.control({
-waypoints: [
-    L.latLng(-34.047790403491476, 18.620539825639522),
-    L.latLng(-33.92401199966931,18.42497199971364)
-],
-show : false,
-routeWhileDragging: true
+const routingControl = L.Routing.control({
+    waypoints: [
+        L.latLng(-34.047790403491476, 18.620539825639522),
+        L.latLng(-33.92401199966931, 18.42497199971364)
+    ],
+    routeWhileDragging: true,
+    show: false, // Suppress default sidebar
 }).addTo(map);
+
+// Use a timeout to wait until the element is added, then remove it
+setTimeout(() => {
+    const routingSidebar = document.querySelector('.leaflet-routing-alternatives-container');
+    if (routingSidebar) {
+        routingSidebar.remove();
+    }
+}, 100);
+
+
 
 
 
@@ -4569,7 +4579,7 @@ for (var i = 0; i < btns.length; i++) {
 
 <div class="clearfix"></div>
 <h3 align='left'>Produced for Commute Republic</h3>
-<p>Last Updated 2025-03-06</p>
+<p>Last Updated 2025-03-07</p>
 <div style="padding:12px;">
   <p> The maps and timetables provided on this website are intended for informational purposes only. By accessing and using this website, you acknowledge and agree to the exclusions and limitations of liability as detailed in our <a href="disclaimer.html">Website Disclaimer</a>.</p>
   <p>🎨 Website Art by <a href="https://www.instagram.com/typically_sara/">@typically_sara</a></p>
