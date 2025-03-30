@@ -26,3 +26,16 @@ function filterImages() {
     div.style.display = shouldDisplay ? 'block' : 'none';
   });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    if ('caches' in window) {
+        caches.open('my-cache').then(cache => {
+            cache.addAll([
+                '/index.html',
+                '/styles.css',
+                '/script.js'
+            ]);
+        });
+    }
+});
+
