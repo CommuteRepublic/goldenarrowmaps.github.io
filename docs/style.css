@@ -1,0 +1,764 @@
+
+
+/* General body styling */
+body {
+  zoom: 80%;
+  overflow-x: auto;
+  overflow-y: auto;
+  margin-top: 400px !important; /* Add space for fixed header */
+  background-image: url('./images/CR_background.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  margin: 20%;
+}
+
+
+.logocontainer {
+  position: fixed; /* Fixes the element to the viewport */
+  top: 0; /* Anchors it to the top */
+  left: 0; /* Anchors it to the left */
+  width: 100%; /* Makes it span the full width of the viewport */
+  background-color: white; /* Optional: Add a background color to avoid overlap issues */
+  z-index: 900; /* Ensures it stays above other content */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for better visibility */
+  background: #dfe0d8;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Footer bar styling */
+.footerbar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 50px;
+  max-height: 200px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+}
+
+
+#logo {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  margin-right: 1px;
+}
+
+#map {
+  flex-grow: 1;
+  height: 100px;
+  width: 200px;
+}
+
+/* Header styling */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #ffde59;
+  color: white;
+  font-size: 30px;
+}
+
+/* Page content styling */
+.content {
+  padding: 20px;
+}
+
+/* Grid menu styling */
+.filterdiv {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.container {
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+/* Button styling */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Gallery styling */
+div.gallery {
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+  align-items: left;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: 700px;
+}
+
+div.desc {
+  padding: 5px;
+  text-align: center;
+}
+
+.responsive {
+  padding: 6px;
+  float: left;
+  width: 80%;
+}
+
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Train menu styling */
+.traincontainer {
+  position: relative;
+  width: 150px;
+  height: 50px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+
+.marquee {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 50px;
+  text-align: left;
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.trainblock {
+  position: absolute;
+  width: 40%;
+  height: 50px;
+  right: 0;
+  background-color: #fff;
+  border-left: 1px solid #000;
+  text-align: left;
+  line-height: 50px;
+}
+
+/* Button container styling */
+.button_container {
+  display: flex;
+  width: 200px;
+  height: 30px;
+  align-items: center;
+  border: 1px solid #000;
+  padding: 10px;
+}
+
+.button {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 1px solid #000;
+  text-align: right;
+}
+
+.button:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.button.clicked:after {
+  display: block;
+  content: "x";
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Truncate text styling */
+.truncate-text {
+  display: inline-block;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: bottom;
+}
+
+.truncate-text:hover {
+  white-space: normal;
+  overflow: visible;
+}
+
+/* Responsive image styling */
+.responsive-img {
+  width: 100px;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Footer elements styling */
+body1 {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.segments-container1 {
+  display: fixed;
+  gap: 20px;
+  width:250px;
+}
+
+.segment1 {
+  display: flex;
+  background-color: white;
+  border-radius: 15px;
+  width: 90px;
+  align-items: center; /* vertically center items */
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  gap: 16px;
+}
+
+.segment1 img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.segment1 a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+.segment1 img:hover {
+  transform: scale(1.1);
+}
+
+.segment1 p {
+  margin-top: 10px;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Popup styling */
+#popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+#popup-box {
+  background-color: #f0f8ff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+#popup-box p {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+}
+
+#popup-box button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: none;
+  background-color: #0078d4;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Gallery container styling */
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  width: 85%;
+  margin: 0 auto;
+  justify-items: center;
+  align-items: stretch;
+}
+
+/* Footer container styling */
+.footer-container {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Fixed gallery styling */
+.fixed-gallery-row {
+  display: grid;
+  grid-template-columns: repeat(4, 2fr)!important;
+  gap: 16px;
+  align-items: stretch;
+  justify-items: left;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 0px 0;
+  margin-bottom: 24px;
+}
+
+.fixed-gallery-item {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0px;
+  width: 80%;
+  box-sizing: border-box;
+}
+
+.fixed-gallery-item img {
+  width: 80%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.fixed-gallery-item .desc {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  .fixed-gallery-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Marquee styling */
+.marquee-container {
+  position: relative;
+  width: 300px;
+  height: 50px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+
+.marquee {
+  position: absolute;
+  width: 600%;
+  height: 100%;
+  line-height: 50px;
+  text-align: left;
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.block {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  right: 0;
+  background-color: #fff;
+  border-left: 1px solid #000;
+  text-align: center;
+  line-height: 50px;
+}
+
+/* Menu container styling */
+.menu-container {
+  width: 90% !important;
+  margin: 24px auto 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 16px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-container label,
+.menu-container select,
+.menu-container button {
+  font-size: 1rem;
+  margin: 0 8px;
+}
+
+.fixed-gallery-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    align-items: left;
+    justify-items: center;
+    background: rgba(255,255,255,0.8);
+    border-radius: 10px;
+    padding: 0px 0;
+    margin-bottom: 24px;
+  }
+.fixed-gallery-item {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.fixed-gallery-item img {
+  width: 100%;
+  max-width: 100%;
+  height: 250px;
+  border-radius: 4px;
+}
+.fixed-gallery-item .desc {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Patch container styling */
+.patch-container {
+  width: 100%;
+  background: #fff;
+  padding: 10px 0;
+  text-align: center;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow-x: show ;
+}
+.patch-container p {
+  margin: 0;
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 1em;
+  color: #222;
+}
+.patch-container a {
+  color: #0074d9;
+  text-decoration: none;
+  margin: 0 4px;
+}
+.patch-container a:hover {
+  text-decoration: underline;
+}
+
+/* General responsive styles */
+/* Responsive styling */
+html, body {
+  align-items: left;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  padding-top: 0 !important;
+  font-size: 16px;
+}
+
+#logo {
+  width: 200px !important;
+  height: 120px !important;
+  margin: 0 auto 10px auto;
+  display: block;
+}
+
+#map {
+  width: 100% !important;
+  min-width: unset;
+  height: 200px !important;
+  margin: 0 auto;
+}
+
+
+.fixed-gallery-row, .gallery-container {
+  grid-template-columns: 1fr !important;
+}
+
+.fixed-gallery-item, .responsive, .gallery, .desc {
+  width: 100% !important;
+  max-width: 100vw !important;
+  box-sizing: border-box;
+}
+
+.fixed-gallery-item img{
+  width: 100% !important;
+  height: 900px !important;
+  object-fit: cover;
+}
+
+.button, .buttonX {
+  width: 36px !important;
+  height: 36px !important;
+  font-size: 1.5rem;
+}
+
+.button_container {
+  width: 100%;
+  height: auto;
+  padding: 4px;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+select, button, label {
+  font-size: 1.1rem !important;
+  min-height: 40px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.marquee-container {
+  width: 95vw !important;
+  min-width: unset;
+  max-width: 100vw;
+  height: 40px !important;
+}
+
+.marquee {
+  font-size: 1rem !important;
+  height: 40px !important;
+  line-height: 40px !important;
+  width: 300vw !important;
+}
+
+/* Hide elements that don't fit well on mobile */
+
+/* Responsive font scaling */
+h1, h2, h3 {
+  font-size: 1.3em !important;
+}
+
+/* Responsive padding/margins for all containers */
+.responsive, .gallery, .desc, .button_container, .menu-container, .footer-container {
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+}
+
+/* Remove floats for mobile */
+.responsive, .trainresponsive {
+  float: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+/* Ensure popups fit screen */
+#popup-overlay, #popup-box {
+  width: 100% !important;
+  height: 100% !important;
+  left: 0 !important;
+  top: 0 !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+#popup-box img {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Make sure all text is readable */
+body, .desc, .gallery, .button_container, label, select, button {
+  font-size: 1.1rem !important;
+}
+
+/* Dynamic Gallery Button Styles */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.toggle-btn {
+  flex: 1; /* Equal button width */
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.selected {
+  flex: 2; /* Wider button when selected */
+  width: 65vw; /* 65% of viewport width */
+  background-color: #007bff;
+  color: white;
+}
+
+/* Responsive override for .logocontainer */
+@media (max-width: 900px) {
+  .logocontainer {
+    flex-direction: column !important;
+    align-items: center !important;
+    padding-top: 1px !important;
+    position: fixed !important;
+    width: 100% !important;
+  }
+  #map {
+    flex-grow: 1;
+    height: 250px!important;
+    min-width: 800px!important;
+  }
+  body {
+    zoom: 50%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    align-items: left!important;
+    margin-top: 500px!important; /* Add space for fixed header */
+    background-image: url('./images/CR_background.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 25%;
+    width: 400px!important;
+  }
+
+  .footerbar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 50px;
+  max-height: 200px;
+  height: 180px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  }
+
+  .segment1 {
+    display: flex;
+    background-color: white;
+    border-radius: 15px;
+    width: 90px;
+    align-items: center; /* vertically center items */
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 16px;
+  }
+
+  .patch-container {
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+    font-size: 0.8rem;
+  }
+
+  .menu-container, .footer-container, .gallery-container, .fixed-gallery-row {
+  width: 90vw !important;
+  min-width: unset;
+  max-width: 150vw;
+  margin: 0 auto 0px auto !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  padding: 0px !important;
+  }
+
+  .footer-container{
+  width: 80% !important;
+  min-width: unset;
+  max-width: 800px;
+  margin: 0 auto 10px auto !important;
+  gap: 8px !important;
+  padding: 8px !important;
+  }
+  .fixed-gallery-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fixed-gallery-item img{
+  width: 100% !important;
+  height: 300px !important;
+  object-fit: cover;
+  }
+
+  div.gallery img {
+  width: 100%;
+  height: 200px;
+  }
+
+}
+
