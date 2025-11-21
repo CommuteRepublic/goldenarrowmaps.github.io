@@ -23,7 +23,7 @@ body {
   background-color: white; /* Optional: Add a background color to avoid overlap issues */
   z-index: 900; /* Ensures it stays above other content */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for better visibility */
-  background: #dfe0d8;
+  background: #624aac;
   justify-content: center;
   align-items: center;
   padding: 0;
@@ -40,7 +40,7 @@ body {
   min-height: 50px;
   max-height: 200px;
   height: 150px;
-  background: rgba(255, 255, 255, 0.8);
+  background: #624aac;
   backdrop-filter: blur(10px);
   box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
   z-index: 999;
